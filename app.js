@@ -8,6 +8,13 @@ app.use(bodyParser.json());
 app.post('/tweeted', (request, response) => {
     const { body } = request;
     console.log(body.tweet);
+    response.send('success');
+});
+
+app.post('/followed', (request, response) => {
+    const { body } = request;
+    console.log(body.follower);
+    response.send('success');
 });
 
 app.listen(port, () => {
